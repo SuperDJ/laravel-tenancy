@@ -63,7 +63,7 @@ return [
         ],
 
         'tenant_template' => [
-            'driver'   => 'mysql',
+            'driver'   => 'sqlite',
             'url'      => env( 'TENANT_DB_URL' ),
             'host'     => env( 'TENANT_DB_HOST', '127.0.0.1' ),
             'port'     => env( 'TENANT_DB_PORT', '3306' ),

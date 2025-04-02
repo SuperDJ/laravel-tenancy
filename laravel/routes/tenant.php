@@ -26,4 +26,12 @@ Route::middleware([
     Route::get('/', function () {
         return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
     });
+
+    Route::get('/posts/create', function () {
+        return '<form action="/posts" method="post"><button type="submit" /></form>';
+    });
+
+    Route::post('/posts', function () {
+        $post = \App\Models\Tenant\Post::create(['title' => 'example', 'description' => 'example']);
+    });
 });
