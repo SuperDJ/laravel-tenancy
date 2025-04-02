@@ -62,6 +62,16 @@ return [
             ]) : [],
         ],
 
+        'tenant_template' => [
+            'driver'   => 'mysql',
+            'url'      => env( 'TENANT_DB_URL' ),
+            'host'     => env( 'TENANT_DB_HOST', '127.0.0.1' ),
+            'port'     => env( 'TENANT_DB_PORT', '3306' ),
+            'username' => env( 'TENANT_DB_USERNAME', 'forge' ),
+            'password' => env( 'TENANT_DB_PASSWORD', '' ),
+            'database' => null,
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
